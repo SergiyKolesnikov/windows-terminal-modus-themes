@@ -1,0 +1,98 @@
+= Modus Color Schemes for Windows Terminal
+
+This is a port of https://protesilaos.com/emacs/modus-themes[the Emacs' Modus themes by Protesilaos Stavrou] to Windows Terminal.
+
+Modus themes are great for coding because they are built around accessibility and clarity first:
+
+. High contrast improves readability and reduces eye strain during long coding sessions.
+. Consistent color semantics make syntax, diffs, and UI states easier to parse quickly.
+. They include variants (light/dark, tinted, color-vision-optimized) so you can pick what stays comfortable and legible for your eyes.
+
+== Installation ==
+
+. In Windows Terminal, open Settings and click "Open JSON file". This will open `settings.json` in your default text editor.
+. Copy the content of the desired scheme JSON file(s) into the `"schemes"` array in `settings.json`. If the array already contains other schemes, separate each entry with a comma. Save the file.
+. In the `"profiles"` section, set `"colorScheme"` to the name of the scheme for each profile you want to apply it to.
+
+== Color-Names Mapping ==
+
+The following table provides the mapping of the color names used in Windows Terminal to the corresponding color names in the Modus themes. For more details on the Modus color definitions, refer to 
+https://protesilaos.com/emacs/modus-themes-colors
+
+.Color-Names Mapping
+|===
+| Windows Terminal | Modus
+
+| black
+| fg-term-black
+
+| brightBlack
+| fg-term-black-bright
+
+| red
+| fg-term-red
+
+| brightRed
+| fg-term-red-bright
+
+| green
+| fg-term-green
+
+| brightGreen
+| fg-term-green-bright
+    
+| yellow
+| fg-term-yellow
+
+| brightYellow
+| fg-term-yellow-bright
+
+| blue
+| fg-term-blue
+
+| brightBlue
+| fg-term-blue-bright
+
+| purple
+| fg-term-magenta
+
+| brightPurple
+| fg-term-magenta-bright
+
+| cyan
+| fg-term-cyan
+
+| brightCyan
+| fg-term-cyan-bright
+
+| white
+| fg-term-white
+
+| brightWhite
+| fg-term-white-bright
+
+| foreground
+| fg-main
+
+| background
+| bg-main
+
+| cursorColor
+| cursor
+
+| selectionBackground
+| bg-mark-select
+|===
+
+== Updating the Scheme Files ==
+
+`update_modus_schemes.py` is a Python script that regenerates all theme JSON files in place.
+
+What the script does:
+
+1. Downloads the palette data from https://protesilaos.com/emacs/modus-themes-colors.
+2. Applies the Windows Terminal to Modus color-name mapping documented in this README.
+3. Resolves semantic Modus aliases (for example, `cursor` -> `fg-main`) to concrete HEX values.
+4. Rewrites each scheme JSON file in this repository with updated values while preserving the standard key order.
+
+Run it from the repository root.
