@@ -1,0 +1,23 @@
+{
+    "black": "#000000",
+    "brightBlack": "#595959",
+    "red": "#A60000",
+    "brightRed": "#B21100",
+    "green": "#006800",
+    "brightGreen": "#00663F",
+    "yellow": "#695500",
+    "brightYellow": "#973300",
+    "blue": "#0031A9",
+    "brightBlue": "#3548CF",
+    "purple": "#721045",
+    "brightPurple": "#531AB6",
+    "cyan": "#005E8B",
+    "brightCyan": "#005F5F",
+    "white": "#A6A6A6",
+    "brightWhite": "#FFFFFF",
+    "foreground": "#000000",
+    "background": "#FFFFFF",
+    "cursorColor": "#D00000",
+    "selectionBackground": "#BFEFFF",
+    "name": "Modus Operandi Tritanopia"
+}
